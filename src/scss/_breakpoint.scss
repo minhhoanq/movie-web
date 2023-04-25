@@ -1,0 +1,13 @@
+@use "./variable" as *;
+
+@mixin mobile {
+    @media screen and (max-width: $mobie-width) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: $tablet-witdh) {
+        @content;
+    }
+}
