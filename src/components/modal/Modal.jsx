@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef} from 'react';
-import { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import './modal.scss';
 
 const Modal = props => {
 
@@ -16,7 +17,7 @@ const Modal = props => {
     );
 }
 
-Modal.propsTypes = {
+Modal.propTypes = {
     active: PropTypes.bool,
     id: PropTypes.string
 }
