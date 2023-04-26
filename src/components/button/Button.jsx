@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from 'prop-types'
 
-const Button = () => {
+import './button.scss';
+
+const Button = props => {
     return (
         <button
             className={`btn ${props.className}`}
@@ -12,14 +14,14 @@ const Button = () => {
     )
 }
 
-const OutlineButton = () => {
+export const OutlineButton = props => {
     return (
-        <button
+        <Button
             className={`btn-outline ${props.className}`}
-            onClick={props.onClick ? () => props.onclick() : null}
+            onClick={props.onClick ? () => props.onClick() : null}
         >
             {props.children}
-        </button>
+        </Button>
     )
 }
 
