@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import './movie-list.scss';
 
+import MovieCard from '../movie-card/MovieCard';
+
 import { SwiperSlide, Swiper } from 'swiper/react';
 // import { Link } from 'react-router-dom';
 
@@ -44,12 +46,12 @@ const MovieList = props => {
             <Swiper
                 grabCursor={true}
                 spaceBetween={10}
-                slidePrevClass={'auto'}
+                slidesPerView={'auto'}
             >
                 {
                     items.map((item, i) => (
                         <SwiperSlide key={i} >
-                            <img src={apiConfig.w500Image(item.poster_path)} alt=''/>
+                            <MovieCard item={item} category={item.category}/>
                         </SwiperSlide>
                     ))
                 }
